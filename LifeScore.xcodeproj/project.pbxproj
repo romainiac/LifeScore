@@ -15,6 +15,9 @@
 		30D2D7382BAB87B400CA9AB0 /* LifeScoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D2D7372BAB87B400CA9AB0 /* LifeScoreTests.swift */; };
 		30D2D7422BAB87B400CA9AB0 /* LifeScoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D2D7412BAB87B400CA9AB0 /* LifeScoreUITests.swift */; };
 		30D2D7442BAB87B400CA9AB0 /* LifeScoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D2D7432BAB87B400CA9AB0 /* LifeScoreUITestsLaunchTests.swift */; };
+		30D2D7552BAB888800CA9AB0 /* LifeEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D2D7542BAB888800CA9AB0 /* LifeEvent.swift */; };
+		30D2D7902BABB05800CA9AB0 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D2D78F2BABB05800CA9AB0 /* ScoreView.swift */; };
+		30D2D7922BABB08900CA9AB0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D2D7912BABB08900CA9AB0 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		30D2D73D2BAB87B400CA9AB0 /* LifeScoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeScoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30D2D7412BAB87B400CA9AB0 /* LifeScoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeScoreUITests.swift; sourceTree = "<group>"; };
 		30D2D7432BAB87B400CA9AB0 /* LifeScoreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeScoreUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		30D2D7542BAB888800CA9AB0 /* LifeEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeEvent.swift; sourceTree = "<group>"; };
+		30D2D78F2BABB05800CA9AB0 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
+		30D2D7912BABB08900CA9AB0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +103,9 @@
 		30D2D7222BAB87B400CA9AB0 /* LifeScore */ = {
 			isa = PBXGroup;
 			children = (
+				30D2D7532BAB887800CA9AB0 /* Models */,
+				30D2D7502BAB885E00CA9AB0 /* Views */,
 				30D2D7232BAB87B400CA9AB0 /* LifeScoreApp.swift */,
-				30D2D7252BAB87B400CA9AB0 /* ContentView.swift */,
-				30D2D7272BAB87B400CA9AB0 /* Item.swift */,
 				30D2D7292BAB87B400CA9AB0 /* Assets.xcassets */,
 				30D2D72B2BAB87B400CA9AB0 /* LifeScore.entitlements */,
 				30D2D72C2BAB87B400CA9AB0 /* Preview Content */,
@@ -130,6 +136,25 @@
 				30D2D7432BAB87B400CA9AB0 /* LifeScoreUITestsLaunchTests.swift */,
 			);
 			path = LifeScoreUITests;
+			sourceTree = "<group>";
+		};
+		30D2D7502BAB885E00CA9AB0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				30D2D7912BABB08900CA9AB0 /* MainView.swift */,
+				30D2D7252BAB87B400CA9AB0 /* ContentView.swift */,
+				30D2D78F2BABB05800CA9AB0 /* ScoreView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		30D2D7532BAB887800CA9AB0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				30D2D7272BAB87B400CA9AB0 /* Item.swift */,
+				30D2D7542BAB888800CA9AB0 /* LifeEvent.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,8 +288,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				30D2D7262BAB87B400CA9AB0 /* ContentView.swift in Sources */,
+				30D2D7922BABB08900CA9AB0 /* MainView.swift in Sources */,
+				30D2D7552BAB888800CA9AB0 /* LifeEvent.swift in Sources */,
 				30D2D7282BAB87B400CA9AB0 /* Item.swift in Sources */,
 				30D2D7242BAB87B400CA9AB0 /* LifeScoreApp.swift in Sources */,
+				30D2D7902BABB05800CA9AB0 /* ScoreView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +452,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LifeScore/Preview Content\"";
+				DEVELOPMENT_TEAM = SVD7H4257T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -444,10 +473,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cachedstudios.LifeScore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -460,6 +490,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LifeScore/Preview Content\"";
+				DEVELOPMENT_TEAM = SVD7H4257T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -480,10 +511,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cachedstudios.LifeScore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
