@@ -78,6 +78,7 @@ struct ScoreView: View {
             .onChange(of: selectedRange, initial: true) {preEvent, newEvent in
                 let currentDate = Date()
                 let calendar = Calendar.current
+                let startOfDay = calendar.startOfDay(for:currentDate)
                 let lastWeek = calendar.date(byAdding: .day, value: -7, to: currentDate)!
                 let lastMonth = calendar.date(byAdding: .day, value: -30, to: currentDate)!
 
@@ -92,6 +93,7 @@ struct ScoreView: View {
                     filteredEvents = events.filter { $0.timestamp >= lastWeek }
                 case "1D":
                     filteredEvents = events.filter { $0.timestamp.isInToday }
+                    filteredEvents.insert(LifeEvent(title: "start", timestamp: startOfDay, score: 0), at: 0)
                 default:
                     break // Handle any additional cases or do nothing for unknown cases
                 }

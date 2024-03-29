@@ -65,6 +65,7 @@ struct LifeEventCell: View {
     let event: LifeEvent
     
     var body: some View {
+        var timeDisplay = ""
         HStack {
             Text(event.timestamp, format: .dateTime.month(.abbreviated).day())
             Spacer()
